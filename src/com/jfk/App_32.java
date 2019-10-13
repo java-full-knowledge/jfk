@@ -6,16 +6,16 @@ package com.jfk;
  */
 
 
-public class App_31 {
+public class App_32 {
 
     public static void main(String[] args) {
-        byte a = 9, b = 7, c = 10, d = 18;
+        byte a = 9, b = 15, c = 10, d = 18;
 
-        if (a > b && a > c && b > d) {
+        if (a < b && a < c && b < d) {
             System.out.println(a);
-        }else if (b > c && b > d){
+        }else if (b < c && b < d){
             System.out.println(b);
-        }else if (c > d) {
+        }else if (c < d) {
             System.out.println(c);
         }else{
             System.out.println(d);
