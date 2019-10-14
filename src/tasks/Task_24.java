@@ -3,11 +3,22 @@ package tasks;
 public class Task_24 {
 
     public static void main(String[] args) {
-        int a = 2;
-        int b = 27;
-        int c = 2;
+        double a = 2;
+        double b = 2;
+        double c = 6;
+        if (a == 2 && b == 2 || b == 2 && c == 2 || a == 2 && c == 2) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+    }
 
-        /*if (a == 2) {
+    /*public static void main(String[] args) {
+        double a = 2;
+        double b = 27;
+        double c = 6;
+
+        if (a == 2) {
             if (b == 2) {
                 System.out.println(true);
             } else {
@@ -27,12 +38,7 @@ public class Task_24 {
             } else {
                 System.out.println(false);
             }
-        }*/
-
-        if (a == 2 && b == 2 || b == 2 && c == 2 || a == 2 && c == 2) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
         }
-    }
+
+    }*/
 }

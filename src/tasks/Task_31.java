@@ -2,24 +2,27 @@ package tasks;
 
 public class Task_31 {
     public static void main(String[] args) {
-        int a = 713;
-        int b = 4749;
-        int c = 2477;
-        int d = 3251;
+        double a = 11;
+        double b = 12;
+        double c = 13;
+        double d = 14;
+        double result1;
+        double result2;
+
         if (a > b) {
-            a = a;
+            result1 = a;
         } else {
-            a = b;
+            result1 = b;
         }
         if (d > c) {
-            d = d;
+            result2 = d;
         } else {
-            d = c;
+            result2 = c;
         }
-        if (a > d) {
-            System.out.println(a);
+        if (result1 > result2) {
+            System.out.println(result1);
         } else {
-            System.out.println(d);
+            System.out.println(result2);
         }
     }
 }
