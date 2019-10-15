@@ -2,9 +2,9 @@ package tasks;
 
 public class Task_22 {
     public static void main(String[] args) {
-        double a = 10;
-        double b = 13;
-        double c = 16;
+        int a = 10;
+        int b = 13;
+        int c = 16;
 
         if (a < b) {
             if (a < c) {
@@ -22,7 +22,7 @@ public class Task_22 {
     }
 
     /*public static void main(String[] args) {
-        double a = 2, b = 3, c = 21, result;
+        int a = 2, b = 3, c = 21, result;
         if (a < b) {
             result = a;
         } else {

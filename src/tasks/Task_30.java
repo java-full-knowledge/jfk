@@ -3,10 +3,10 @@ package tasks;
 public class Task_30 {
 
     public static void main(String[] args) {
-        double a = 20;
-        double b = 28;
-        double c = 12;
-        double min, max, med;
+        int a = 20;
+        int b = 28;
+        int c = 12;
+        int min, max, med;
         if (a > b) {
             if (a > c) {
                 max = a;

@@ -2,12 +2,12 @@ package tasks;
 
 public class Task_32 {
     public static void main(String[] args) {
-        double a = 11;
-        double b = 12;
-        double c = 13;
-        double d = 14;
-        double result1;
-        double result2;
+        int a = 11;
+        int b = 12;
+        int c = 13;
+        int d = 14;
+        int result1;
+        int result2;
 
         if (a < b) {
             result1 = a;
@@ -26,10 +26,10 @@ public class Task_32 {
         }
     }
     /*public static void main(String[] args) {
-        double a = 713;
-        double b = 4749;
-        double c = 2477;
-        double d = 3251;
+        int a = 713;
+        int b = 4749;
+        int c = 2477;
+        int d = 3251;
         if (a < b) {
             a = a;
         } else {

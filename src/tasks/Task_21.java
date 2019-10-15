@@ -2,9 +2,9 @@ package tasks;
 
 public class Task_21 {
     public static void main(String[] args) {
-        double a = 20;
-        double b = 18;
-        double c = 16;
+        int a = 20;
+        int b = 18;
+        int c = 16;
 
         if (a > b) {
             if (a > c) {

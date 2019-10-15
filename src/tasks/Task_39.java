@@ -2,11 +2,11 @@ package tasks;
 
 public class Task_39 {
     public static void main(String[] args) {
-        double a = 1;
-        double b = 2;
-        double c = 3;
-        double d = 4;
-        double min1, max1, min2, max2, minRes, middle1, maxRes, middle2;
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+        int min1, max1, min2, max2, minRes, middle1, maxRes, middle2;
         if (a < b) {
             min1 = a;
             max1 = b;
