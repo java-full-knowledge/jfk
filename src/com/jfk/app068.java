@@ -13,7 +13,7 @@ public class app068 {
         }
         else {
             y = 1;
-            System.out.println("y");
+            System.out.println(y);
         }
     }
 }
