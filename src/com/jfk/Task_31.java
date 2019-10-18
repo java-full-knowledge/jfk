@@ -1,4 +1,4 @@
-package com.jfk;
+package src.com.jfk;
 
 
 public class Task_31 {
@@ -8,10 +8,15 @@ public class Task_31 {
         double b = 44;
         double c = 65;
 
-        if ( a < b && b < c  ) {
-            System.out.println( c );
+        if ( a > b && a > c  ) {
+            System.out.println( a );
         } else {
-            System.out.println(false);
+            if ( b > a && b > c ) {
+                System.out.println(b);
+            } else {
+                if ( c > a && c > b);
+                System.out.println( c );
+            }
         }
     }
 }

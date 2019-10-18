@@ -1,9 +1,12 @@
-package  com.jfk;
+package src.com.jfk;
+
+
+
 public class Task_21 {
     public static void main(String[] args) {
         double a = 30;
-        double b = 18;
-        double c = 16;
+        double b = 48;
+        double c = 56;
 
         if (a > b) {
             if (a > c) {

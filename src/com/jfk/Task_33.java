@@ -1,4 +1,4 @@
-package com.jfk;
+package src.com.jfk;
 
 
 public class Task_33 {
@@ -8,7 +8,7 @@ public class Task_33 {
         double b = 52;
         double c = 95;
 
-        if ( a == 1 && b > a &&  c > a  ) {
+        if ( a == 1 || b == 1 || c == 1 ) {
             System.out.println( true );
         } else {
             System.out.println(false);

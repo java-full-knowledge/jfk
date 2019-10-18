@@ -1,4 +1,4 @@
-package com.jfk;
+package src.com.jfk;
 
 
 public class Task_35 {
