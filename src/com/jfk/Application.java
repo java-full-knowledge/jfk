@@ -8,25 +8,19 @@ package com.jfk;
 
 public class Application {
 
-
     public static void main(String[] args) {
-        int x = 101;
-        long k = 10;
-        System.out.println(k + 10L);
-        if (x > 0) {
-            if (x < 100) {
-                System.out.println("X mec e 0 ic");
-            } else {
-                System.out.println("ASHXATEC");
+        int a = 101;
+        int  b= 12;
+        int  c= 10;
+        if (a > b && a > c) {
+            System.out.println(a);
             }
-        } else if (k  == 10){
-            System.out.println("X mec chi 0 -ic");
-        }
-        boolean isTen = k == 10;
-        if (!((x > 0 || x < 100) && isTen)) {
-            int d = 20;
-            System.out.println(d);
-        }
+        else if (b > a && b > c){
+                System.out.println(b);
+            }
+         else
+             System.out.println(c);
+    }
+
 
     }
-}

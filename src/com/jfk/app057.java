@@ -1,6 +1,7 @@
 package com.jfk;
 
-public class app057 {public static void main(String[] args){
+public class app057 {
+    public static void main(String[] args){
     int x = 261 , c , b , a , k = 300;
     float y;
     a = x  % 10;

@@ -2,7 +2,7 @@ package com.jfk;
 
 public class app056 {
     public static void main(String[] args){
-        int x = 500 , c , b , a ;
+        int x = 501 , c , b , a ;
         float y;
         a = x  % 10;
         b = (x / 10) % 10;
