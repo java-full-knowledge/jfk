@@ -6,7 +6,7 @@ public class App_23 {
         int b = 33;
         int c = 33;
         boolean x = true;
-       if ((a == b) || (a == b)|| (b == c))
+       if ((a == b) || (a == c)|| (b == c))
             {
            System.out.println(x);
             }
