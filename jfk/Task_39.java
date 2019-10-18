@@ -1,4 +1,4 @@
-package src.com.jfk;
+package jfk;
 
 public class Task_39 {
     public static void main(String[] args) {
