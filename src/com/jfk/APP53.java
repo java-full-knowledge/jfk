@@ -1,6 +1,6 @@
 package com.jfk;
 
-public class APP54 {
+public class APP53 {
     public static void main(String[] args) {
         int x = 643;
         int k = 500;
