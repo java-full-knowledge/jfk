@@ -12,7 +12,7 @@ public class APP151 {
 
             if (i % n == 0) {
 
-                sum = sum + i;
+                sum += i;
 
             }
 
