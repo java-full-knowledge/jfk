@@ -1,4 +1,4 @@
-package src.com.jfk;
+package com.jfk;
 
 public class App_51 {
 
