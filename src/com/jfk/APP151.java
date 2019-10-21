@@ -4,7 +4,7 @@ public class APP151 {
     public static void main(String[] args) {
         int n = 3;
 
-        int k = 1000;
+        int k = 10;
 
         int sum = 0;
 
@@ -12,7 +12,7 @@ public class APP151 {
 
             if (i % n == 0) {
 
-                sum += i;
+                sum = sum+i;
 
             }
 
