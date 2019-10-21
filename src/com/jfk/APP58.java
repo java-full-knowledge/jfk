@@ -7,13 +7,13 @@ public class APP58 {
         char y;
         int x=831, a, b;
         a=x/100;
-        b=(x/10)%10;
+        b=x%10;
         if (a+b<5 ) {
             y='a';
         }else {
             y='b';
         }
-        System.out.println(y);
+        System.out.println(b);
 
     }
 }
