@@ -6,7 +6,7 @@ public class App_239 {
         int[] arr = {1, 14, 0, 24, 0, 51};
         double sum = 0;
         int count = 0;
-        double res;
+        double res = 0;
 
 
         for(int i = 0; i < arr.length; i++) {
