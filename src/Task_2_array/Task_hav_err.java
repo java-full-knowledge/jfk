@@ -11,9 +11,10 @@ public class Task_hav_err {
             temp=(m-1)/2;
         count=temp;
         for(int i=0;i<=temp;i++) {
-            for(int k=0;k<=count;k++)
+            for(int k=0;k<m;k++)
+                if(k<count || k>=count+(2*i+1))
                 System.err.print("  ");
-            for (int j = 0; j <2 * i + 1; j++)
+            else
                 System.err.print("* ");
             count--;
             System.err.println();
