@@ -10,6 +10,5 @@ public class Task_229 {
             }
         }
         System.out.println(sum);
-
     }
 }
