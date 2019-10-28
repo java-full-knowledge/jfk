@@ -1,6 +1,7 @@
 package com.jfk;
 
-public class AcuteTriangle {
+
+public class AcuteTriangles {
 
     public static void main(String[] args) {
 
