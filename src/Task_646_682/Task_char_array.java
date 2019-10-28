@@ -18,7 +18,5 @@ public class Task_char_array  {
         if(t==true)
             count++;
         System.out.println(count);
-        char [] p=new char[5];
-        System.out.println((int) p[1]);
     }
 }
