@@ -42,53 +42,61 @@ public class Time {
     }
 
     public void setTime(int hour, int minute, int second) {
-        if (hour >= 0 && hour <= 23)
+        if (hour >= 0 && hour <= 23) {
             this.hour = hour;
-        if (minute >= 0 && minute <= 59)
+        }
+        if (minute >= 0 && minute <= 59) {
             this.minute = minute;
-        if (second >= 0 && second <= 59)
+        }
+        if (second >= 0 && second <= 59) {
             this.second = second;
+        }
     }
 
     public String toString() {
         String Minute = "", Second = "", Hour = "";
-        if (minute < 10)
+        if (minute < 10) {
             Minute += ("0" + minute);
-        else
+        } else {
             Minute += minute;
-        if (second < 10)
+        }
+        if (second < 10) {
             Second += ("0" + second);
-        else
+        } else {
             Second += second;
-        if (hour < 10)
+        }
+        if (hour < 10) {
             Hour += ("0" + hour);
-        else
+        } else {
             Hour += hour;
+        }
         return (Hour + "/" + Minute + "/" + Second);
     }
 
     public Time nextSecond() {
         Time time1;
-        if (second + 1 <= 59)
+        if (second + 1 <= 59) {
             time1 = new Time(hour, minute, second + 1);
-        else if (minute + 1 <= 59)
+        } else if (minute + 1 <= 59) {
             time1 = new Time(hour, minute + 1, 0);
-        else
+        } else {
             time1 = new Time(hour + 1, 0, 0);
+        }
         return time1;
 
     }
 
     public Time previousSecond() {
         Time time1;
-        if (second - 1 >= 0)
+        if (second - 1 >= 0) {
             time1 = new Time(hour, minute, second - 1);
-        else if (minute - 1 >= 0)
+        } else if (minute - 1 >= 0) {
             time1 = new Time(hour, minute - 1, 59);
-        else if (hour != 0)
+        } else if (hour != 0) {
             time1 = new Time(hour - 1, 59, 59);
-        else
+        } else {
             time1 = new Time(23, 59, 59);
+        }
         return time1;
     }
 }

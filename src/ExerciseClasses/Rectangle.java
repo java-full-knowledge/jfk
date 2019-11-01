@@ -5,9 +5,8 @@ public class Rectangle {
     private float width = 1;
 
     public Rectangle() {
-    }
 
-    ;
+    }
 
     public Rectangle(float length, float width) {
         this.length = length;
@@ -15,14 +14,17 @@ public class Rectangle {
     }
 
     public float getLength() {
+
         return length;
     }
 
     public void setLength(float length) {
+
         this.length = length;
     }
 
     public float getWidth() {
+
         return width;
     }
 
@@ -31,6 +33,7 @@ public class Rectangle {
     }
 
     public double getArea() {
+
         return length * width;
     }
 

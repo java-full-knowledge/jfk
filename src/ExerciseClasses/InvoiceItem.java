@@ -14,30 +14,37 @@ public class InvoiceItem {
     }
 
     public String getId() {
+
         return id;
     }
 
     public void setDesc(String desc) {
+
         this.desc = desc;
     }
 
     public int getQty() {
+
         return qty;
     }
 
     public void setQty(int qty) {
+
         this.qty = qty;
     }
 
     public double getUnitPrice() {
+
         return unitPrice;
     }
 
     public void setUnitPrice(double unitPrice) {
+
         this.unitPrice = unitPrice;
     }
 
     public double getTotal() {
+
         return unitPrice * qty;
     }
 

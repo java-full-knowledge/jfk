@@ -24,14 +24,17 @@ public class Date {
     }
 
     public int getDay() {
+
         return day;
     }
 
     public int getMonth() {
+
         return month;
     }
 
     public int getYear() {
+
         return year;
     }
 
@@ -69,14 +72,14 @@ public class Date {
     public String toString() {
         String Day = "", Month = "";
         if (day < 10) {
-            Day += ("0" + day);
+            Day = Day + ("0" + day);
         } else {
-            Day += day;
+            Day = Day + day;
         }
         if (month < 10) {
-            Month += ("0" + month);
+            Month = Month + ("0" + month);
         } else {
-            Month += month;
+            Month = Month + month;
         }
         return (Day + "/" + Month + "/" + year);
     }

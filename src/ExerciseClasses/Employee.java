@@ -26,22 +26,27 @@ public class Employee {
     }
 
     public String getName() {
+
         return firstName + " " + lastName;
     }
 
     public int getSalary() {
+
         return salary;
     }
 
     public void setSalary(int salary) {
+
         this.salary = salary;
     }
 
     public int getAnnulaSalary() {
+
         return salary * 12;
     }
 
     public int raiseSalary(int percent) {
+
         return salary += (salary * percent) / 100;
     }
 
