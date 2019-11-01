@@ -16,7 +16,7 @@ public class App_234 {
             }
         }
 
-        if (count != 0) {
+        if (counter != 0) {
             res = sum / counter;
         }
 
