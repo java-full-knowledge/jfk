@@ -6,7 +6,6 @@ public class Characters {
 
         char value[] = {'i', ' ', 'a', 'm', ' ', 'a', ' ', 'p', 'r', 'o', 'g', 'r', 'a', 'm', 'm', 'e', 'r'};
         String val = "i am a programmer";
-        val
         for (int i = 0; i < value.length; i++) {
 //            System.out.print(value[i]);
         }
