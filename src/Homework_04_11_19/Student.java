@@ -4,10 +4,10 @@ public class Student extends Person {
     private Integer course;
     private String faculty;
 
-    Student(String  firstName,String lastName,Integer course,String faculty){
-        super(firstName,lastName);
-        this.course=course;
-        this.faculty=faculty;
+    Student(String firstName, String lastName, Integer course, String faculty) {
+        super(firstName, lastName);
+        this.course = course;
+        this.faculty = faculty;
     }
 
     public Integer getCourse() {
@@ -20,6 +20,6 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return "Student "+super.toString()+"\n"+"Course:"+getCourse()+"\n"+"Faculty:"+getFaculty();
+        return "Student " + super.toString() + "\n" + "Course:" + getCourse() + "\n" + "Faculty:" + getFaculty();
     }
 }

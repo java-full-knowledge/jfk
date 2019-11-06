@@ -4,10 +4,9 @@ public class Person {
     private String firstName;
     private String lastName;
 
-    public Person(String  firstName,String lastName)
-    {
-        this.firstName=firstName;
-        this.lastName=lastName;
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public String getFirstName() {
@@ -20,6 +19,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Name:"+getFirstName()+" "+getLastName();
+        return "Name:" + getFirstName() + " " + getLastName();
     }
 }

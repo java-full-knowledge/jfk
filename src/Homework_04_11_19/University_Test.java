@@ -8,17 +8,17 @@ public class University_Test {
 
         Student[] students = new Student[]{a1, a2};
 
-        Teacher t1=new Teacher("hhhh","rrrrr","IKM");
-        Teacher t2=new Teacher("tttt","WWWW","IKM");
+        Teacher t1 = new Teacher("hhhh", "rrrrr", "IKM");
+        Teacher t2 = new Teacher("tttt", "WWWW", "IKM");
 
-        Teacher [] teachers=new Teacher[]{t1,t2};
+        Teacher[] teachers = new Teacher[]{t1, t2};
 
         Group group2 = new Group("Ao124356", students);
-        Group group1=new Group("Ar3456",students);
+        Group group1 = new Group("Ar3456", students);
 
-        Group [] groups=new Group[]{group1,group2};
+        Group[] groups = new Group[]{group1, group2};
 
-        University university =new University("YSU",students,teachers,groups);
+        University university = new University("YSU", students, teachers, groups);
 
       /*  System.out.println(group2.getIndex());
         group2.addStudent(a1);
@@ -32,6 +32,6 @@ public class University_Test {
         university.addTeaher(t1);
         university.addTeaher(t2);
         university.addGroup(group2);
-        System.out.println("\n"+university);
+        System.out.println("\n" + university);
     }
 }

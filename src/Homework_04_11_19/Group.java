@@ -21,30 +21,29 @@ public class Group {
     }
 
     public void addStudent(Student student) {
-        if (index + 1 > this.students.length-1) {
+        if (index + 1 > this.students.length - 1) {
             Student[] temp = new Student[this.students.length * 2];
             for (int i = 0; i < students.length; i++)
                 temp[i] = this.students[i];
 
-            this.students=new Student[temp.length];
-            for(int i=0;i<temp.length;i++)
-                this.students[i]=temp[i];
+            this.students = new Student[temp.length];
+            for (int i = 0; i < temp.length; i++)
+                this.students[i] = temp[i];
         }
-        this.students[index]=student;
+        this.students[index] = student;
         index++;
 
     }
-    public void removeStudent(Student student)
-    {
-        if(index==0)
+
+    public void removeStudent(Student student) {
+        if (index == 0)
             System.out.println("IsEmpty!!!");
-        else
-        {
-            for(int i=0;i<this.students.length;i++)
-                if(this.students[i]==student) {
+        else {
+            for (int i = 0; i < this.students.length; i++)
+                if (this.students[i] == student) {
                     for (int j = i + 1; j < this.students.length; j++)
                         this.students[j - 1] = this.students[j];
-                    this.students[this.students.length-1]=null;
+                    this.students[this.students.length - 1] = null;
                     index--;
                     break;
                 }
@@ -54,10 +53,10 @@ public class Group {
 
     @Override
     public String toString() {
-        String temp="";
-        for(Student in :students)
-        if(in!=null)
-            temp+=(in.toString()+"\n"+"\n");
+        String temp = "";
+        for (Student in : students)
+            if (in != null)
+                temp += (in.toString() + "\n" + "\n");
         return temp;
     }
 }
