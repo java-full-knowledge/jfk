@@ -13,7 +13,7 @@ class Shape {
 
     @Override
     public String toString() {
-        return "Volume:" + getVolume();
+        return "Volume:" + getVolume()+";";
     }
 }
 
