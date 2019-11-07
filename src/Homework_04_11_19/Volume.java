@@ -13,7 +13,7 @@ class Shape {
 
     @Override
     public String toString() {
-        return "Volume:" + getVolume()+";";
+        return "Volume:" + getVolume() + ";";
     }
 }
 
@@ -124,7 +124,7 @@ class Box extends Shape {
     }
 }
 
-public class Main {
+public class Volume {
     public static void main(String[] args) {
         Cylinder cylinder = new Cylinder(2, 4);
         Pyramid pyramid = new Pyramid(12, 4);
