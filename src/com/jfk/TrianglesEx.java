@@ -1,6 +1,6 @@
 package com.jfk;
 
-public class Triangles {
+public class TrianglesEx {
 
     public static void main(String[] args) {
 
