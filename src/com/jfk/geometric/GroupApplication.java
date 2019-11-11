@@ -1,5 +1,7 @@
 package com.jfk.geometric;
 
+import com.jfk.inheritance.Employee;
+
 public class GroupApplication {
 
     public static void main(String[] args) {
