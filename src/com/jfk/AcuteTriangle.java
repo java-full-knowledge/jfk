@@ -1,8 +1,6 @@
 package com.jfk;
 
 public class AcuteTriangle {
-
-
     public static void main(String[] args) {
 
         int columns = 6;
