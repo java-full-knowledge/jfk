@@ -2,7 +2,7 @@ package com.jfk.classesuml;
 
 import static java.lang.Math.PI;
 public class Circle {
-    public double radius = 1.0;
+    private double radius = 1.0;
     private String colour = "red";
 
     public Circle() {
