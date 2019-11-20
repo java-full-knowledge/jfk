@@ -7,5 +7,8 @@ public class Date_test {
 
         testDate.setDate(9,2,2020);
         System.out.println(testDate);
+        System.out.print(testDate.getDay()+".");
+        System.out.print(testDate.getMonth()+".");
+        System.out.print(testDate.getYear());
     }
 }
