@@ -1,6 +1,8 @@
 package com.jfk;
 
 
+
+
 public class App52 {
     public static void main(String[] args) {
         boolean t = false;
@@ -11,6 +13,7 @@ public class App52 {
         if (a == b  || b ==c || a==c ) {
             t = true;
             System.out.println(t);}
+
     }
 
     }

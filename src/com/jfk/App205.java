@@ -1,13 +1,25 @@
 package com.jfk;
 
+import java.util.Arrays;
+
 public class App205 {
     public static void main(String[] args) {
-        int n = 8569;
-        int num = 0;
-        while (n != 0) {
-            num = n % 10;
-            n = n / 10;
-            System.out.println("num = " + num);
+        int number = 3454630;
+        int count=0;
+        if(number==0){
+            count=1;
+            System.out.println(0);
+            return;
+        }
+
+        while(number!=0){
+            number=number/10;
+            count++;
+
+        }
+        System.out.println("count " +count);
+
+
+
         }
     }
-}
