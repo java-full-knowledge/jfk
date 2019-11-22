@@ -9,7 +9,9 @@ public class Manager extends Employee {
         super(salary);
         this.responsibilities = responsibilities;
     }
+    public Manager(){
 
+    }
     public String getResponsibilities() {
         return responsibilities;
     }

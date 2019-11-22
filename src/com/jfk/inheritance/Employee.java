@@ -7,7 +7,9 @@ public class Employee {
     public Employee(float salary) {
         this.salary = salary;
     }
+    public Employee() {
 
+    }
     public float getSalary() {
         return salary;
     }
