@@ -1,4 +1,4 @@
-package com.jfk.geometric;
+package src.com.jfk.geometric;
 
 public class Volume {
 

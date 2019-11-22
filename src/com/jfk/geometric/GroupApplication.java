@@ -1,6 +1,4 @@
-package com.jfk.geometric;
-
-import com.jfk.inheritance.Employee;
+package src.com.jfk.geometric;
 
 public class GroupApplication {
 

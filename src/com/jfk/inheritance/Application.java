@@ -1,4 +1,4 @@
-package com.jfk.inheritance;
+package src.com.jfk.inheritance;
 
 import java.util.Arrays;
 import java.util.Enumeration;
@@ -7,7 +7,7 @@ public class Application {
 
 
     public static void main(String[] args) throws InterruptedException {
-        /*Employee employee = new Employee();
+        Employee employee = new Employee();
         Programmer programmer = new Programmer();
         Manager manager = new Manager();
 

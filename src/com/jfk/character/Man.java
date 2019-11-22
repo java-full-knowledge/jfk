@@ -1,7 +1,7 @@
 
 package src.com.jfk.character;
 
-public class Man {
+public abstract class Man {
 
     String name;
     int age;
