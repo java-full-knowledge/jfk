@@ -1,4 +1,4 @@
-package com.jfk.inheritance;
+package src.com.jfk.inheritance;
 
 public enum PhoneCodes {
     ARM("Armenia", "+374"),

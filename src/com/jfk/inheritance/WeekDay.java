@@ -1,4 +1,4 @@
-package com.jfk.inheritance;
+package src.com.jfk.inheritance;
 
 public final class WeekDay {
     private final int ordinal;
