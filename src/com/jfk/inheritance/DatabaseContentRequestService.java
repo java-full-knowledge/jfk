@@ -1,4 +1,4 @@
-package com.jfk.inheritance;
+package src.com.jfk.inheritance;
 
 public class DatabaseContentRequestService extends MicrosoftApiRequest {
 

@@ -1,7 +1,6 @@
 package src.com.jfk.inheritance;
 
 import java.util.Arrays;
-import java.util.Enumeration;
 
 public class Application {
 
@@ -19,7 +18,7 @@ public class Application {
 
         for (int i = 0; i < 3; i++) {
             System.out.println(objects[i].getSalary());
-        }*/
+        }
         ApiRequestService [] requestServices = new ApiRequestService[2];
 
         requestServices[0] = new DatabaseContentRequestService();
