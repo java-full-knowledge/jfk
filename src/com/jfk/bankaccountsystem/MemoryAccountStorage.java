@@ -17,7 +17,12 @@ public class MemoryAccountStorage extends Storage {
     //Also need to add another variable to hold current storage size.
     @Override
     public void add(AbstractBankEntity entity) {
-
+        entity.tableName();
+        if (currentStorageSize != entities.length) {
+            super.entities[currentStorageSize] = entity;
+            this.currentStorageSize ++;
+        }
+        System.out.println("Storage is full...");
     }
 
     @Override
@@ -32,6 +37,37 @@ public class MemoryAccountStorage extends Storage {
 
     @Override
     protected int currentStorageSize() {
-        return 0;
+        return currentStorageSize;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

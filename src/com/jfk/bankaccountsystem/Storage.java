@@ -8,9 +8,12 @@ package com.jfk.bankaccountsystem;
 
 public abstract class Storage extends SizedStorage {
 
+    protected int currentStorageSize;
+
     protected AbstractBankEntity[] entities;
 
     protected Storage(int size) {
+        this.currentStorageSize = 0;
         this.entities = new AbstractBankEntity[size];
     }
 
