@@ -7,7 +7,7 @@ import com.jfk.userregistration.dto.UserCreateRequestDto;
 import com.jfk.userregistration.validators.domainvalidator.ValidatesDomain;
 import com.jfk.userregistration.validators.result.ValidationResult;
 
-public class UserService implements CrudService {
+public class UserService implements CrudService<User, DomainCreationResponse, UserCreateRequestDto> {
 
     private final ValidatesDomain domainValidator;
 
@@ -47,7 +47,12 @@ public class UserService implements CrudService {
     }
 
     @Override
-    public Domain read(int id) {
+    public DomainCreationResponse create(UserCreateRequestDto createParameters) {
+        return null;
+    }
+
+    @Override
+    public User read(int id) {
         return null;
     }
 

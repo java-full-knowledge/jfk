@@ -26,7 +26,7 @@ public class UserRegistrationApplication {
         dto.setPassword("123");
         dto.setRePassword("123");
         dto.setUsername("test username");
-        DomainCreationResponse domainCreationResponse = userCrudService.create(dto);
+        DomainCreationResponse domainCreationResponse = (DomainCreationResponse)userCrudService.create(dto);
 
         for (ValidationResult validationResult : domainCreationResponse.getValidationResults()) {
             if (validationResult != null) {
