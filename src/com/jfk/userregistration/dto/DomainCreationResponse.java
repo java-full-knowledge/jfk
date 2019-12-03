@@ -3,7 +3,7 @@ package com.jfk.userregistration.dto;
 import com.jfk.userregistration.validators.result.ValidationResult;
 import com.jfk.userregistration.domain.Domain;
 
-public class DomainCreationResponse {
+public final class DomainCreationResponse {
 
     private Domain domain;
     private ValidationResult[] validationResults;

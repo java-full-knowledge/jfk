@@ -1,15 +1,12 @@
 package com.jfk.userregistration.service;
 
-import com.jfk.userregistration.domain.Domain;
-import com.jfk.userregistration.dto.DomainCreationResponse;
+public interface CrudService<REQUEST, RESPONSE> {
 
-public interface CrudService<D extends Domain, R, C> {
+    RESPONSE create(REQUEST request);
 
-    R create(C createParameters);
+    RESPONSE read(int id);
 
-    D read(int id);
-
-    Domain update(Object updateParameters);
+    RESPONSE update(REQUEST request);
 
     boolean delete(int id);
 }

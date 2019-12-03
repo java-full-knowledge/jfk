@@ -2,7 +2,7 @@ package com.jfk.userregistration.validators.domainvalidator;
 
 import com.jfk.userregistration.validators.result.ValidationResult;
 
-public interface ValidatesDomain {
+public interface ValidatesDomain<T> {
 
-    ValidationResult[] doValidate(Object domain);
+    ValidationResult[] doValidate(T createParameters);
 }
