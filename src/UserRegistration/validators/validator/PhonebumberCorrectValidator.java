@@ -12,12 +12,11 @@ public class PhonebumberCorrectValidator implements Validator<PhonenumberCreateR
         boolean truenumber;
         Phonetypes[] arr=Phonetypes.values();
         String temp;
-        PhonenumberCreateRequestDto ptr= instance;
             temp="";
             truenumber=false;
-            temp+=((char)ptr.getPhonenumber().getPhonenumber().charAt(0));
-            temp+=((char)ptr.getPhonenumber().getPhonenumber().charAt(1));
-            temp+=((char)ptr.getPhonenumber().getPhonenumber().charAt(2));
+            temp+=((char)instance.getPhonenumber().getPhonenumber().charAt(0));
+            temp+=((char)instance.getPhonenumber().getPhonenumber().charAt(1));
+            temp+=((char)instance.getPhonenumber().getPhonenumber().charAt(2));
             for(Phonetypes str:arr)
                 if(str.getNum().equals(temp))
                     truenumber=true;

@@ -9,8 +9,7 @@ public class EmailValidator implements Validator<UserCreateRequestDto> {
     @Override
     public ValidationResult validate(UserCreateRequestDto instance) {
 
-        UserCreateRequestDto userCreateRequestDto = instance;
-        if (!userCreateRequestDto.getEmail().contains("@")) {
+        if (!instance.getEmail().contains("@")) {
             System.out.println(ValidationMessage.email.getMessage());
             return new ValidationResult(false, ValidationMessage.email.getMessage());
         }
