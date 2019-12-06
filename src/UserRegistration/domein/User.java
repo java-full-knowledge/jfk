@@ -15,6 +15,7 @@ public class User extends Domain {
         this.email = email;
         this.userName = userName;
         this.password = password;
+        this.removetime = null;
     }
 
     public String getEmail() {
@@ -27,8 +28,6 @@ public class User extends Domain {
 
     public User() {
     }
-
-    ;
 
     public String getFirstname() {
         return firstname;
@@ -70,6 +69,7 @@ public class User extends Domain {
                 ", lastname='" + lastname + '\'' +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
+                ", removetime=" + removetime +
                 '}';
     }
 }

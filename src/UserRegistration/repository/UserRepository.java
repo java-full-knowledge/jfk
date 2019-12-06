@@ -3,16 +3,8 @@ package UserRegistration.repository;
 import UserRegistration.checks.CheckUsername;
 import UserRegistration.domein.User;
 import UserRegistration.dto.DomainCreationResponse;
-import UserRegistration.dto.UserCreateRequestDto;
-import UserRegistration.service.CrudeService;
-import UserRegistration.service.UserService;
-import UserRegistration.validators.domainvalidator.UserValidator;
-import UserRegistration.validators.domainvalidator.ValidatesDomayn;
-import UserRegistration.validators.validator.EmailValidator;
-import UserRegistration.validators.validator.PasswordValidator;
-import UserRegistration.validators.validator.Validator;
 
-public class UserRepository implements Repository {
+public class UserRepository implements Repository<User> {
 
     private int user_index;
     private User[] users;
@@ -22,12 +14,66 @@ public class UserRepository implements Repository {
         user_index = 0;
     }
 
-    public User[] getDomains() {
+    public User[] getUsers() {
+        return users;
+    }
+
+
+    @Override
+    public User save(DomainCreationResponse domain) {
+        if (user_index == users.length) {
+            System.out.println("Repository is full...");
+            return null;
+        }
+
+
+       /* ValidatesDomayn userValidator = new UserValidator(validators1);
+        CrudeService userCrudService = new UserService(userValidator,this);
+
+        UserCreateRequestDto dto = (UserCreateRequestDto) user;
+        DomainCreationResponse domainCreationResponse = (DomainCreationResponse) userCrudService.create(dto);
+
+        //stugume e,vor repository-um ka nman usernamne-ov User*/
+        CheckUsername u=new CheckUsername(this);
+
+        if (domain.getDomain() != null && !u.uniqueUsername((User) domain.getDomain())) {
+            domain.getDomain().setId(user_index);
+            users[user_index] = (User) domain.getDomain();
+            user_index++;
+        }
+        return  (User)domain.getDomain();
+    }
+    @Override
+    public User delete(int id) {
+        User us=null;
+        for (int i = 0; i < user_index; i++) {
+            if (users[i].getId() == id) {
+                us=users[i];
+                for (int j = 0; j < user_index - 1; j++) {
+                    users[j] = users[j + 1];
+                }
+            }
+            users[--user_index] = null;
+        }
+        return us;
+    }
+
+    @Override
+    public User get() {
+       return users[user_index-1];
+    }
+
+    @Override
+    public int getUserSize() {
+        return user_index;
+    }
+
+    /*public User[] getDomains() {
         return users;
     }
 
     @Override
-    public void delete(int id) {
+    public User delete(int id) {
         int i = 0;
         while (users[i] != null) {
             if (users[i].getId() == id) {
@@ -41,8 +87,9 @@ public class UserRepository implements Repository {
         }
     }
 
+
     @Override
-    public void save(Object user) {
+    public User save(User user) {
         if (user_index == users.length) {
             System.out.println("Is Full");
             return;
@@ -53,7 +100,7 @@ public class UserRepository implements Repository {
 
 
         ValidatesDomayn userValidator = new UserValidator(validators1);
-        CrudeService userCrudService = new UserService(userValidator);
+        CrudeService userCrudService = new UserService(userValidator,this);
 
         UserCreateRequestDto dto = (UserCreateRequestDto) user;
         DomainCreationResponse domainCreationResponse = (DomainCreationResponse) userCrudService.create(dto);
@@ -76,5 +123,5 @@ public class UserRepository implements Repository {
     @Override
     public int getUserSize() {
         return user_index - 1;
-    }
+    }*/
 }

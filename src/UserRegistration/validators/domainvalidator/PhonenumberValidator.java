@@ -3,7 +3,7 @@ package UserRegistration.validators.domainvalidator;
 import UserRegistration.validators.result.ValidationResult;
 import UserRegistration.validators.validator.Validator;
 
-public class PhonenumberValidator implements ValidatesDomayn {
+public class PhonenumberValidator implements ValidatesDomayn{
 
     private final Validator [] validators;
 

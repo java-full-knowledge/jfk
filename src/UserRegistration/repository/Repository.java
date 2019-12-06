@@ -1,11 +1,16 @@
 package UserRegistration.repository;
 
-public interface Repository<T> {
-    public void delete(int id);
+import UserRegistration.dto.DomainCreationResponse;
 
-    public void save(Object user);
+public interface Repository<Domain> {
 
-    public T get();
+
+    public Domain delete(int id);
+
+    public Domain save(DomainCreationResponse domain);
+
+    public Domain get();
 
     public int getUserSize();
+
 }

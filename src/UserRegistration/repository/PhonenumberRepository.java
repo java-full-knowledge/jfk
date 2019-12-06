@@ -2,16 +2,8 @@ package UserRegistration.repository;
 
 import UserRegistration.domein.Phonenumber;
 import UserRegistration.dto.DomainCreationResponse;
-import UserRegistration.dto.PhonenumberCreateRequestDto;
-import UserRegistration.service.CrudeService;
-import UserRegistration.service.PhonenumberService;
-import UserRegistration.validators.domainvalidator.PhonenumberValidator;
-import UserRegistration.validators.domainvalidator.ValidatesDomayn;
-import UserRegistration.validators.validator.PhonebumberCorrectValidator;
-import UserRegistration.validators.validator.PhonenumberLengthValidator;
-import UserRegistration.validators.validator.Validator;
 
-public class PhonenumberRepository implements Repository {
+public class PhonenumberRepository implements Repository<Phonenumber> {
 
     private int phonenumber_index;
     private Phonenumber[] phonenumbers;
@@ -21,7 +13,7 @@ public class PhonenumberRepository implements Repository {
         phonenumber_index = 0;
     }
 
-    public Phonenumber[] getDomains() {
+    public Phonenumber[] getPhonenumbers() {
         return phonenumbers;
     }
 
@@ -29,6 +21,45 @@ public class PhonenumberRepository implements Repository {
         this.phonenumbers = phonenumbers;
     }
 
+    @Override
+    public Phonenumber delete(int id) {
+        Phonenumber phone=null;
+        for (int i = 0; i <this.getUserSize() ; i++)
+            if(phonenumbers[i].getUserId()==id) {
+                phone=phonenumbers[i];
+                for (int j = i; j < getUserSize() - 1; j++)
+                    phonenumbers[j] = phonenumbers[j + 1];
+                phonenumbers[--phonenumber_index]=null;
+            break;
+        }
+        return phone;
+    }
+
+    @Override
+    public Phonenumber save(DomainCreationResponse domain) {
+        if (phonenumber_index == phonenumbers.length) {
+            System.out.println("Repository is full...");
+            return null;
+        }
+        if (domain.getDomain() != null ) {
+            domain.getDomain().setId(phonenumber_index);
+            phonenumbers[phonenumber_index] = (Phonenumber) domain.getDomain();
+            phonenumber_index++;
+        }
+        return  (Phonenumber) domain.getDomain();
+    }
+
+
+    @Override
+    public Phonenumber get() {
+        return phonenumbers[phonenumber_index-1];
+    }
+
+    @Override
+    public int getUserSize() {
+        return phonenumber_index;
+    }
+/*
     @Override
     public void delete(int id) {
 
@@ -66,5 +97,5 @@ public class PhonenumberRepository implements Repository {
     @Override
     public int getUserSize() {
         return phonenumber_index;
-    }
+    }*/
 }

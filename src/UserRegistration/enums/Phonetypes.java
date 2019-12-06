@@ -1,4 +1,4 @@
-package UserRegistration.validators.validator;
+package UserRegistration.enums;
 
 public enum Phonetypes {
     a("055"), b("077"), c("093"),

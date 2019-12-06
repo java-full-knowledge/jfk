@@ -1,13 +1,13 @@
 package UserRegistration.validators.validator;
 
-import UserRegistration.Message.ValidationMessage;
+import UserRegistration.enums.Message.ValidationMessage;
 import UserRegistration.dto.PhonenumberCreateRequestDto;
 import UserRegistration.validators.result.ValidationResult;
 
-public class PhonenumberLengthValidator implements Validator {
+public class PhonenumberLengthValidator implements Validator<PhonenumberCreateRequestDto> {
     @Override
-    public ValidationResult validate(Object instance) {
-        PhonenumberCreateRequestDto phonDto = (PhonenumberCreateRequestDto) instance;
+    public ValidationResult validate(PhonenumberCreateRequestDto instance) {
+        PhonenumberCreateRequestDto phonDto = instance;
             if (phonDto.getPhonenumber().getPhonenumber().length() != 9 ) {
                 System.out.println(ValidationMessage.phonenumber.getMessage());
                 return new ValidationResult(false, ValidationMessage.phonenumber.getMessage());

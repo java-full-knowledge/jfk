@@ -1,23 +1,18 @@
 package UserRegistration.validators.validator;
 
-import UserRegistration.Message.ValidationMessage;
+import UserRegistration.enums.Message.ValidationMessage;
 import UserRegistration.dto.PhonenumberCreateRequestDto;
+import UserRegistration.enums.Phonetypes;
 import UserRegistration.validators.result.ValidationResult;
 
-public class PhonebumberCorrectValidator implements Validator {
+public class PhonebumberCorrectValidator implements Validator<PhonenumberCreateRequestDto> {
 
-    public static void main(String[] args) {
-        String a="077";
-        String p="";
-        p+=((char)a.charAt(0));
-        System.out.println((char)48);
-    }
     @Override
-    public ValidationResult validate(Object instance) {
+    public ValidationResult validate(PhonenumberCreateRequestDto instance) {
         boolean truenumber;
-        Phonetypes [] arr=Phonetypes.values();
+        Phonetypes[] arr=Phonetypes.values();
         String temp;
-        PhonenumberCreateRequestDto ptr=(PhonenumberCreateRequestDto) instance;
+        PhonenumberCreateRequestDto ptr= instance;
             temp="";
             truenumber=false;
             temp+=((char)ptr.getPhonenumber().getPhonenumber().charAt(0));
