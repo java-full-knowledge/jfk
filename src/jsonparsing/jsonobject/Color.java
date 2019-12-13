@@ -7,10 +7,10 @@ public class Color {
     private String type;
     private Code code;
 
-    public Color(String color, String category,Code code) {
+    public Color(String color, String category, Code code) {
         this.color = color;
         this.category = category;
-        this.code=code;
+        this.code = code;
     }
 
     public Color(String color, String category, String type, Code code) {
@@ -25,7 +25,7 @@ public class Color {
         return "Color{" +
                 "color='" + color + '\'' +
                 ", category='" + category + '\'' +
-                ", type='" + type + '\'' +","+
+                ", type='" + type + '\'' + "," +
                 " code=" + code +
                 '}';
     }

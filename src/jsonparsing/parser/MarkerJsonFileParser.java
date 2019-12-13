@@ -8,24 +8,25 @@ public class MarkerJsonFileParser implements Parser<Marker> {
 
     public MarkerJsonFileParser(String jsonfile) {
         this.jsonfile = jsonfile;
-        markerFields=jsonfile.split("\",");
+        markerFields = jsonfile.split("\",");
     }
+
     @Override
     public Marker parse() {
 
-        String name=this.selector("name");
-        double [] position=this.selectorarray();
+        String name = this.selector("name");
+        double[] position = this.selectorarray();
 
 
-        return new Marker(name,position);
+        return new Marker(name, position);
     }
 
     private double[] selectorarray() {
-        String temp=selector("position").replace("[","").replace("]","");
-        String [] arr=temp.split(",");
-        double [] array=new double[arr.length];
-        for (int i = 0; i <arr.length ; i++) {
-            array[i]=Double.parseDouble(arr[i]);
+        String temp = selector("position").replace("[", "").replace("]", "");
+        String[] arr = temp.split(",");
+        double[] array = new double[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            array[i] = Double.parseDouble(arr[i]);
         }
         return array;
     }
@@ -37,8 +38,8 @@ public class MarkerJsonFileParser implements Parser<Marker> {
                         .replace("{", "")
                         .replace("}", "")
                         .replace("\"", "")
-                        .replace("\n" ,"")
-                        .replace(" ","")
+                        .replace("\n", "")
+                        .replace(" ", "")
                         .trim();
             }
         }

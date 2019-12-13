@@ -9,8 +9,8 @@ public class ImageJsonFileParser implements Parser<Image> {
 
     public ImageJsonFileParser(String jsonfile) {
         this.jsonfile = jsonfile;
-        jsonfile=jsonfile.replaceFirst(":","");
-        imageFields=jsonfile.split(",");
+        jsonfile = jsonfile.replaceFirst(":", "");
+        imageFields = jsonfile.split(",");
     }
 
     @Override
@@ -21,7 +21,7 @@ public class ImageJsonFileParser implements Parser<Image> {
         int imagewidth = Integer.parseInt(this.selector("width"));
         int imageheight = Integer.parseInt(this.selector("height"));
 
-        return new Image(imageurl,imagewidth,imageheight);
+        return new Image(imageurl, imagewidth, imageheight);
     }
 
     private String selector(String attribute) {

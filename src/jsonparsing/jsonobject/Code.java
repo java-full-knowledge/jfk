@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Code {
 
-    private int [] rgba;
+    private int[] rgba;
     private String hex;
 
     public Code(int[] rgba, String hex) {

@@ -9,17 +9,17 @@ public class Google_MapJsonFileParser implements Parser<Google_Map> {
 
     public Google_MapJsonFileParser(String jsonfile) {
         this.jsonfile = jsonfile;
-        jsonfile=jsonfile.replaceFirst(":","");
-        colorsfilds=jsonfile.split("},");
+        jsonfile = jsonfile.replaceFirst(":", "");
+        colorsfilds = jsonfile.split("},");
     }
 
     @Override
     public Google_Map parse() {
-        Marker[] colors=new Marker[colorsfilds.length];
+        Marker[] colors = new Marker[colorsfilds.length];
         MarkerJsonFileParser markerJsonFileParser;
-        for (int i = 0; i <colors.length ; i++) {
-            markerJsonFileParser=new MarkerJsonFileParser(colorsfilds[i]);
-            colors[i]=markerJsonFileParser.parse();
+        for (int i = 0; i < colors.length; i++) {
+            markerJsonFileParser = new MarkerJsonFileParser(colorsfilds[i]);
+            colors[i] = markerJsonFileParser.parse();
         }
         return new Google_Map(colors);
     }

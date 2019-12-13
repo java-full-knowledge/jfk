@@ -11,8 +11,8 @@ public class ColorJsonFileParser implements Parser<Color> {
 
     public ColorJsonFileParser(String jsonfile) {
         this.jsonfile = jsonfile;
-        codefilds=jsonfile.split("code");
-        colorFields=codefilds[0].split(",");
+        codefilds = jsonfile.split("code");
+        colorFields = codefilds[0].split(",");
     }
 
     @Override
@@ -22,10 +22,10 @@ public class ColorJsonFileParser implements Parser<Color> {
         String color1 = this.selector("color");
         String coolorcategory = this.selector("category");
         String coolortype = this.selector("type");
-        CodeJsonFileParser codejson=new CodeJsonFileParser(codefilds[1]);
-        Code code=codejson.parse();
+        CodeJsonFileParser codejson = new CodeJsonFileParser(codefilds[1]);
+        Code code = codejson.parse();
 
-        return new Color(color1,coolorcategory,coolortype,code) ;
+        return new Color(color1, coolorcategory, coolortype, code);
     }
 
     private String selector(String attribute) {

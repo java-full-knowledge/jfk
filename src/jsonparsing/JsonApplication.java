@@ -11,19 +11,19 @@ public class JsonApplication {
                 colorstring = "C:\\Java\\jfk\\src\\jsonparsing\\jsonfiles\\colors.json",
                 imagestring = "C:\\Java\\jfk\\src\\jsonparsing\\jsonfiles\\image.json",
                 thumbnailstring = "C:\\Java\\jfk\\src\\jsonparsing\\jsonfiles\\thumbnail.json",
-                google_mapstring="C:\\Java\\jfk\\src\\jsonparsing\\jsonfiles\\google_map.json";
+                google_mapstring = "C:\\Java\\jfk\\src\\jsonparsing\\jsonfiles\\google_map.json";
 
         PersonApplication personApplication = new PersonApplication(personstring);
         ImageApplication imageApplication = new ImageApplication(imagestring);
         ColorsApplication colorsApplication = new ColorsApplication(colorstring);
         ThumbnailApplication thumbnailApplication = new ThumbnailApplication(thumbnailstring);
-        Google_MapApplication google_mapApplication=new Google_MapApplication(google_mapstring);
+        Google_MapApplication google_mapApplication = new Google_MapApplication(google_mapstring);
 
         Person person = personApplication.parsing();
         Image image = imageApplication.parsing();
         Colors colors = colorsApplication.parsing();
         Thumbnail thumbnail = thumbnailApplication.parsing();
-        Google_Map google_map=google_mapApplication.parsing();
+        Google_Map google_map = google_mapApplication.parsing();
 
         System.out.println(person);
         System.out.println();

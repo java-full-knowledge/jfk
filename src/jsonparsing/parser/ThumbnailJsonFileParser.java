@@ -9,8 +9,8 @@ public class ThumbnailJsonFileParser implements Parser<Thumbnail> {
 
     public ThumbnailJsonFileParser(String jsonfile) {
         this.jsonfile = jsonfile;
-        jsonfile=jsonfile.replaceFirst(":","");
-        thumbnailFields=jsonfile.split(",");
+        jsonfile = jsonfile.replaceFirst(":", "");
+        thumbnailFields = jsonfile.split(",");
     }
 
     @Override
@@ -21,7 +21,7 @@ public class ThumbnailJsonFileParser implements Parser<Thumbnail> {
         int thumbnailwidth = Integer.parseInt(this.selector("width"));
         int thumbnailheight = Integer.parseInt(this.selector("height"));
 
-        return new Thumbnail(thumbnailurl,thumbnailwidth,thumbnailheight);
+        return new Thumbnail(thumbnailurl, thumbnailwidth, thumbnailheight);
     }
 
     private String selector(String attribute) {

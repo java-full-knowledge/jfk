@@ -3,7 +3,7 @@ package jsonparsing.validator.thumbnailvalidators;
 import jsonparsing.validator.JsonValidator;
 import jsonparsing.validator.ValidationResult;
 
-public class ThumbnailWidthValidator implements JsonValidator<String , ValidationResult> {
+public class ThumbnailWidthValidator implements JsonValidator<String, ValidationResult> {
     @Override
     public ValidationResult validate(String content) {
         if (content.contains("width"))

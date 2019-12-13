@@ -3,7 +3,7 @@ package jsonparsing.validator.thumbnailvalidators;
 import jsonparsing.validator.JsonValidator;
 import jsonparsing.validator.ValidationResult;
 
-public class ThumbnailUrlValidator implements JsonValidator<String , ValidationResult> {
+public class ThumbnailUrlValidator implements JsonValidator<String, ValidationResult> {
     @Override
     public ValidationResult validate(String content) {
         if (content.contains("url") && content.contains(".jpg"))

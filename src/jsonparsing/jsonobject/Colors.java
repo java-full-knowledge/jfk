@@ -2,7 +2,7 @@ package jsonparsing.jsonobject;
 
 public class Colors {
 
-    private Color [] colors;
+    private Color[] colors;
 
     public Colors(Color[] colors) {
         this.colors = colors;
@@ -14,9 +14,9 @@ public class Colors {
 
     @Override
     public String toString() {
-        String s="";
-        for(Color col:colors)
-            s+=col.toString()+"\n";
+        String s = "";
+        for (Color col : colors)
+            s += col.toString() + "\n";
         return s;
     }
 }

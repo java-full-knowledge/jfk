@@ -9,25 +9,26 @@ public class CodeJsonFileParser implements Parser<Code> {
 
     public CodeJsonFileParser(String jsonfile) {
         this.jsonfile = jsonfile;
-        jsonfile=jsonfile.replaceFirst(":","");
-        imageFields=jsonfile.split("],");
+        jsonfile = jsonfile.replaceFirst(":", "");
+        imageFields = jsonfile.split("],");
     }
+
     @Override
-    public  Code parse() {
+    public Code parse() {
 
 
-        int [] codergba=this.selectorarray();
-        String codehex=this.selector("hex");
+        int[] codergba = this.selectorarray();
+        String codehex = this.selector("hex");
 
-        return new Code(codergba,codehex);
+        return new Code(codergba, codehex);
     }
 
     private int[] selectorarray() {
-        String temp=selector("rgba").replace("[","").replace("]","");
-        String [] arr=temp.split(",");
-        int [] array=new int[arr.length];
-        for (int i = 0; i <arr.length ; i++) {
-            array[i]=Integer.parseInt(arr[i]);
+        String temp = selector("rgba").replace("[", "").replace("]", "");
+        String[] arr = temp.split(",");
+        int[] array = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            array[i] = Integer.parseInt(arr[i]);
         }
         return array;
     }
@@ -39,8 +40,8 @@ public class CodeJsonFileParser implements Parser<Code> {
                         .replace("{", "")
                         .replace("}", "")
                         .replace("\"", "")
-                        .replace("\n" ,"")
-                        .replace(" ","")
+                        .replace("\n", "")
+                        .replace(" ", "")
                         .trim();
             }
         }

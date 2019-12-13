@@ -10,7 +10,7 @@ public class PersonJsonFileParser implements Parser<Person> {
 
     public PersonJsonFileParser(String jsonfile) {
         this.jsonfile = jsonfile;
-        personFields=jsonfile.split(",");
+        personFields = jsonfile.split(",");
     }
 
     @Override

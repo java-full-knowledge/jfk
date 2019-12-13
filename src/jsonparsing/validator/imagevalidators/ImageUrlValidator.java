@@ -3,7 +3,7 @@ package jsonparsing.validator.imagevalidators;
 import jsonparsing.validator.JsonValidator;
 import jsonparsing.validator.ValidationResult;
 
-public class ImageUrlValidator implements JsonValidator<String , ValidationResult> {
+public class ImageUrlValidator implements JsonValidator<String, ValidationResult> {
     @Override
     public ValidationResult validate(String content) {
         if (content.contains("url") && content.contains(".jpg"))

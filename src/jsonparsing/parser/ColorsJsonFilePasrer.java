@@ -9,17 +9,17 @@ public class ColorsJsonFilePasrer implements Parser<Colors> {
 
     public ColorsJsonFilePasrer(String jsonfile) {
         this.jsonfile = jsonfile;
-        jsonfile=jsonfile.replaceFirst(":","");
-        colorsfilds=jsonfile.split("},");
+        jsonfile = jsonfile.replaceFirst(":", "");
+        colorsfilds = jsonfile.split("},");
     }
 
     @Override
     public Colors parse() {
-        Color [] colors=new Color[colorsfilds.length-1];
+        Color[] colors = new Color[colorsfilds.length - 1];
         ColorJsonFileParser colorJsonFileParser;
-        for (int i = 0; i <colors.length ; i++) {
-            colorJsonFileParser=new ColorJsonFileParser(colorsfilds[i]);
-            colors[i]=colorJsonFileParser.parse();
+        for (int i = 0; i < colors.length; i++) {
+            colorJsonFileParser = new ColorJsonFileParser(colorsfilds[i]);
+            colors[i] = colorJsonFileParser.parse();
         }
         return new Colors(colors);
     }

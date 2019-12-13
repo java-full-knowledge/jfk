@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Google_Map {
 
-    private Marker [] markers;
+    private Marker[] markers;
 
     public Google_Map(Marker[] markers) {
         this.markers = markers;
