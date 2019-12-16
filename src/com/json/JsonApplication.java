@@ -14,14 +14,14 @@ public class JsonApplication {
 
 
     public static void main(String[] args) throws IOException {
-        File personJson = new File("C:\\Users\\User\\IdeaProjects\\jfk\\src\\com\\json\\person.json");
-        FileInputStream inputStream = new FileInputStream(personJson);
-        byte[] bytes = inputStream.readAllBytes();
-        String content = new String(bytes);
-        JsonValidator validator = new JsonContentValidator();
-        validator.validate(content);
-        Parser<Person> parser = new PersonJsonFileParser(content);
-        Person person = parser.parse();
-        System.out.println(person);
+//        File personJson = new File("C:\\Users\\User\\IdeaProjects\\jfk\\src\\com\\json\\person.json");
+//        FileInputStream inputStream = new FileInputStream(personJson);
+//        byte[] bytes = inputStream.readAllBytes();
+//        String content = new String(bytes);
+//        JsonValidator validator = new JsonContentValidator();
+//        validator.validate(content);
+//        Parser<Person> parser = new PersonJsonFileParser(content);
+//        Person person = parser.parse();
+//        System.out.println(person);
     }
 }
