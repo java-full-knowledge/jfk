@@ -91,11 +91,11 @@ public class BankApplication {
         System.out.println(emp.tableName());
     }
 
-    AbstractBankEntity entity = new AbstractBankEntity() {
+    /*AbstractBankEntity entity = new AbstractBankEntity() {
         public String toString() {
             return "XXX";
         }
-    };
+    };*/
 
 }
 
